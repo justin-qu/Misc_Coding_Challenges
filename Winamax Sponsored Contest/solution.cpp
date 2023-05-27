@@ -79,12 +79,12 @@ GolfCourse::~GolfCourse()
 {
     for(int i = 0; i < height; i++)
     {
-        delete inputMatrix[i];
-        delete outputMatrix[i];
+        delete[] inputMatrix[i];
+        delete[] outputMatrix[i];
     }
 
-    delete inputMatrix;
-    delete outputMatrix;
+    delete[] inputMatrix;
+    delete[] outputMatrix;
 }
 
 void GolfCourse::depthFirstSearch()
